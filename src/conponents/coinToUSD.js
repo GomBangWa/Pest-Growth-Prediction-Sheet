@@ -7,7 +7,6 @@ function PayMoneyForCoin(props) {
   const [amount, setAmount] = useState();
   useEffect(() => {
     setSelectedCoinPrice(coins[0].quotes.USD.price);
-    console.log(coins);
   }, [setSelectedCoinPrice]);
   const onCoinChange = (e) => {
     setSelectedCoinPrice(e.target.value);
@@ -57,9 +56,7 @@ function PayMoneyForCoin(props) {
               : !inverted
               ? `You have to pay ${
                   Math.round(selectedCoinPrice * amount * 100) / 100
-                }$ for ${amount} ${
-                  amount === 0 && amount === 1 ? "coin." : "coins."
-                }`
+                }$ for ${amount} ${amount <= 1 ? "coin." : "coins."}`
               : `You can buy ${
                   Math.round((amount / selectedCoinPrice) * 100) / 100
                 } ${
