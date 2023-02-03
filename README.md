@@ -1,3 +1,3 @@
-# Coin Tracker
+# Pest Growth Prediction Sheet
 
-This project was created to organize the React knowledge you have learned so far. It's really beginner level, but I hope to be able to make anything in the future.
+It is a program that shows the forecasted value of pest growth as a table after forecasting using the weather api and allows you to download this table as an excel file.
